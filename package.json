@@ -1,0 +1,25 @@
+{
+  "name": "tv-toast",
+  "version": "1.0.0",
+  "description": "tailwind powered vuejs toast component",
+  "main": "tv-toast.vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/acidjazz/tv-toast.git"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "tailwindcss",
+    "toast"
+  ],
+  "author": "kevin olson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/acidjazz/tv-toast/issues"
+  },
+  "homepage": "https://github.com/acidjazz/tv-toast#readme"
+}

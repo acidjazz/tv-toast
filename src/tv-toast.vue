@@ -73,7 +73,7 @@ export default {
     type: {
       type: String,
       required: false,
-      validate: (type) => { return ['success', 'info', 'danger', 'warning', 'ChatMessage'].includes(type) },
+      validate: (type) => { return ['success', 'info', 'danger', 'warning'].includes(type) },
       default: '',
     },
     timeout: {

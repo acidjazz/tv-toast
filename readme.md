@@ -9,7 +9,7 @@
 [![](https://img.shields.io/github/license/acidjazz/tv-toast?style=flat-square)](https://www.npmjs.com/package-tv-toast)
 
 
-> programmatic toasts for [Nuxt.js](https://nuxtjs.org) powered by [Tailwind CSS](https://tailwindcss.com)
+> Programmatic toasts for [Nuxt.js](https://nuxtjs.org) powered by [Tailwind CSS](https://tailwindcss.com)
 
 ## Quick Setup
 1. Add the `nuxt-tv-toast` dependency to your Nuxt.js project

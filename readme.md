@@ -9,7 +9,6 @@
 
 [![](https://img.shields.io/npm/v/tv-toast.svg?logo=npm)](https://www.npmjs.com/package/tv-toast)
 [![](https://img.shields.io/npm/dt/tv-toast.svg)](https://www.npmjs.com/package/tv-toast)
-[![Package Quality](https://npm.packagequality.com/shield/tv-toast.svg)](https://packagequality.com/#?package=tv-toast)
 [![](https://img.shields.io/badge/chat-on%20discord-7289DA.svg?logo=discord)](https://discord.gg/enn4S6)
 
 > programmatic toasts for [nuxtjs](https://nuxtjs.org) powered by [tailwindcss](https://tailwindcss.com)

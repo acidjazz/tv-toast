@@ -1,4 +1,6 @@
 <template>
+
+  <!-- div class="z-40 fixed inset-0 flex flex-col-reverse items-end justify-center px-4 py-6 pointer-events-none sm:p-6 sm:items-end sm:justify-end'"></div> make sure these dont get purged -->
   <transition enter-active-class="transform ease-out duration-300 transition" enter-class="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2" enter-to-class="translate-y-0 opacity-100 sm:translate-x-0" leave-active-class="transition ease-in duration-100" leave-class="opacity-100" leave-to-class="opacity-0">
     <div v-if="active && primary === false" class="max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto relative mb-4 overflow-hidden">
       <div v-if="timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100" :style="`width: ${timeLeftPercent}%`"></div>
@@ -33,6 +35,7 @@
       </div>
     </div>
     <div class="max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto mb-4" v-if="active && primary !== false && secondary !== false">
+      <div v-if="timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100" :style="`width: ${timeLeftPercent}%`"></div>
       <div class="flex rounded-lg shadow-xs">
         <div class="w-0 flex-1 flex items-center p-4">
           <div class="w-full">
@@ -52,7 +55,8 @@
         </div>
       </div>
     </div>
-    <div class="max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto" v-if="active && primary !== false && secondary === false">
+    <div class="max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto mb-4" v-if="active && primary !== false && secondary === false">
+      <div v-if="timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100" :style="`width: ${timeLeftPercent}%`"></div>
       <div class="rounded-lg shadow-xs overflow-hidden">
         <div class="p-4">
           <div class="flex items-center">

@@ -72,3 +72,12 @@ yarn add nuxt-tv-toast
   ]
 }
 ```
+
+3. If you're using [Purge](https://tailwindcss.com/docs/controlling-file-size), add this module to the content section of `tailwind.config.js`
+
+```js
+module.exports = {
+    content: [
+      './node_modules/tv-toast/**/*.vue',
+  },
+```

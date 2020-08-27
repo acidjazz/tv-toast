@@ -36,6 +36,18 @@
 ```
 ![](media/error.gif?raw=true)
 
+* Right-sided split buttons
+```js
+  this.$toast.show({
+    title: 'Toast with actions',
+    message: 'This toast has multiple actions',
+    primary: { label: 'Primary', action: () => alert('primary') },
+    secondary: { label: 'Secondary', action: () => alert('secondary') },
+    timeout: false,
+  })
+```
+![](media/actions.gif?raw=true)
+
 
 ## Quick Setup
 1. Add `nuxt-tv-toast` dependency to your project

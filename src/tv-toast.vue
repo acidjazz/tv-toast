@@ -9,11 +9,14 @@
               <div class="border-2 border-green-200 rounded-full p-1" v-if="type === 'success'">
                 <IconCheck class="w-3 h-3" primary="text-green-400" secondary="text-green-300"></IconCheck>
               </div>
-              <div class="border-2 border-red-200 rounded-full p-1" v-if="type === 'danger'">
-                <IconBang class="w-3 h-3" primary="text-red-400" secondary="text-red-300"></IconBang>
+              <div class="border-2 border-blue-200 rounded-full p-1" v-if="type === 'info'">
+                <IconInfo class="w-3 h-3" primary="text-blue-400" secondary="text-blue-300"></IconInfo>
               </div>
               <div class="border-2 border-yellow-200 rounded-full p-1" v-if="type === 'warning'">
                 <IconBang class="w-3 h-3" primary="text-yellow-400" secondary="text-yellow-300"></IconBang>
+              </div>
+              <div class="border-2 border-red-200 rounded-full p-1" v-if="type === 'danger'">
+                <IconBang class="w-3 h-3" primary="text-red-400" secondary="text-red-300"></IconBang>
               </div>
             </div>
             <div class="ml-3 w-0 flex-1 pt-0.5">

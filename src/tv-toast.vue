@@ -1,7 +1,7 @@
 <template>
   <transition enter-active-class="transform ease-out duration-300 transition" enter-class="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2" enter-to-class="translate-y-0 opacity-100 sm:translate-x-0" leave-active-class="transition ease-in duration-100" leave-class="opacity-100" leave-to-class="opacity-0">
-    <div class="max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto relative mb-4" v-if="active &amp;&amp; primary === false">
-      <div class="absolute left-0 bottom-0 h-1" v-if="timeout" :style="`width: ${timeLeftPercent}%`"></div>
+    <div v-if="active && primary === false" class="max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto relative mb-4 overflow-hidden">
+      <div v-if="timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100" :style="`width: ${timeLeftPercent}%`"></div>
       <div class="rounded-lg shadow-xs overflow-hidden bg-white z-100">
         <div class="p-4">
           <div class="flex items-start">
@@ -32,7 +32,7 @@
         </div>
       </div>
     </div>
-    <div class="max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto mb-4" v-if="active &amp;&amp; primary !== false">
+    <div class="max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto mb-4" v-if="active && primary !== false && secondary !== false">
       <div class="flex rounded-lg shadow-xs">
         <div class="w-0 flex-1 flex items-center p-4">
           <div class="w-full">
@@ -47,6 +47,23 @@
             </div>
             <div class="-mt-px h-0 flex-1 flex">
               <button class="flex items-center justify-center w-full rounded-br-lg border border-transparent px-4 py-3 text-sm leading-5 font-medium text-gray-700 transition ease-in-out duration-150 hover:text-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:text-gray-800 active:bg-gray-50" @click="secondaryAction">{{ secondary.label }}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto" v-if="active && primary !== false && secondary === false">
+      <div class="rounded-lg shadow-xs overflow-hidden">
+        <div class="p-4">
+          <div class="flex items-center">
+            <div class="w-0 flex-1 flex justify-between">
+              <p class="w-0 flex-1 text-sm leading-5 font-medium text-gray-900" v-html="message"></p>
+              <button class="ml-3 flex-shrink-0 text-sm leading-5 font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150" @click="primaryAction">{{ primary.label }}</button>
+            </div>
+            <div class="ml-4 flex-shrink-0 flex">
+              <button class="inline-flex text-gray-400 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150">
+                <IconTimes class="h-4 w-4" primary="text-gray-400" secondary="text-gray-400"></IconTimes>
+              </button>
             </div>
           </div>
         </div>

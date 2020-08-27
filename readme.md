@@ -35,6 +35,16 @@ this.toast.show('Keeping it simple')
 
 ```js
   this.$toast.show({
+    message: 'Single action toast',
+    primary: { label: 'Primary', action: () => alert('primary') },
+    timeout: false,
+  })
+```
+![](media/action.gif?raw=true)
+
+
+```js
+  this.$toast.show({
     title: 'Toast with actions',
     message: 'This toast has multiple actions',
     primary: { label: 'Primary', action: () => alert('primary') },

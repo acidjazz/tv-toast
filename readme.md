@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="media/toasts1.png" />
+  <img src="media/toast.png" />
 </p>
 
 <p align="center">

@@ -12,7 +12,20 @@
 > programmatic toasts for [nuxtjs](https://nuxtjs.org) powered by [tailwindcss](https://tailwindcss.com)
 
 
-## Quick start
+## Quick Setup
+1. Add `nuxt-tv-toast` dependency to your project
 ```bash
+# Using npm
+npm install nuxt-tv-toast
+# Using yarn
 yarn add nuxt-tv-toast
+```
+
+2. Add `nuxt-tv-toast` to the `modules` section of `nuxt.concifg.js`
+```js
+{
+  modules: [
+    'nuxt-tv-toast'
+  ]
+}
 ```

@@ -13,9 +13,7 @@
 ```js
 this.toast.show('Keeping it simple')
 ```
-<p align="right">
-  <img src="media/simple.gif" />
-</p>
+![](media/simple.gif?raw=true)
 
 ```js
   this.$toast.show({

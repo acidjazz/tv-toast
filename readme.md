@@ -15,6 +15,11 @@
 
 ## Usage
 
+* Simple message
+```js
+this.toast.show('Keeping it simple')
+```
+
 * Show a successful notification
 ```js
   this.$toast.show({
@@ -49,13 +54,14 @@
 
 
 ## Quick Setup
-1. Add `nuxt-tv-toast` dependency to your project
+1. Add the `nuxt-tv-toast` dependency to your Nuxt.js project
 ```bash
 # Using npm
 npm install nuxt-tv-toast
 # Using yarn
 yarn add nuxt-tv-toast
 ```
+
 2. Add `nuxt-tv-toast` to the `modules` section of `nuxt.concifg.js`
 ```js
 {

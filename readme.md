@@ -19,6 +19,7 @@
 ```js
 this.toast.show('Keeping it simple')
 ```
+![](media/simple.gif?raw=true)
 
 * Show a successful notification
 ```js

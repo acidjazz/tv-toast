@@ -15,13 +15,11 @@
 
 ## Usage
 
-* Simple message
 ```js
 this.toast.show('Keeping it simple')
 ```
 ![](media/simple.gif?raw=true)
 
-* Show a successful notification
 ```js
   this.$toast.show({
     type: 'success',
@@ -31,7 +29,6 @@ this.toast.show('Keeping it simple')
 ```
 ![](media/success.gif?raw=true)
 
-* Show an Error 
 ```js
   this.$toast.show({
     type: 'danger',
@@ -41,7 +38,6 @@ this.toast.show('Keeping it simple')
 ```
 ![](media/error.gif?raw=true)
 
-* Right-sided split buttons
 ```js
   this.$toast.show({
     title: 'Toast with actions',

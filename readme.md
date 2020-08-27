@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="media/toast.png" width="400" />
+  <img src="media/toast.png" width="600" />
 </p>
 
 [![](https://img.shields.io/npm/v/tv-toast.svg?logo=npm)](https://www.npmjs.com/package/tv-toast)

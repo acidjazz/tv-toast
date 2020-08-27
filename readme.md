@@ -7,8 +7,34 @@
 [![](https://img.shields.io/npm/dt/tv-toast.svg?style=flat-suqare)](https://www.npmjs.com/package/tv-toast)
 [![](https://img.shields.io/badge/chat-on%20discord-7289DA.svg?logo=discord&style=flat-suqare)](https://discord.gg/enn4S6)
 
-
 > programmatic toasts for [Nuxt.js](https://nuxtjs.org) powered by [Tailwind CSS](https://tailwindcss.com)
+
+## Quick Setup
+1. Add the `nuxt-tv-toast` dependency to your Nuxt.js project
+```bash
+npm install nuxt-tv-toast
+# OR
+yarn add nuxt-tv-toast
+```
+
+2. Add `nuxt-tv-toast` to the `modules` section of `nuxt.concifg.js`
+```js
+{
+  modules: [
+    'nuxt-tv-toast'
+  ]
+}
+```
+
+3. If you're using [Purge](https://tailwindcss.com/docs/controlling-file-size), add this module to the content section of `tailwind.config.js`
+
+```js
+module.exports = {
+    content: [
+      './node_modules/tv-toast/**/*.vue'
+  }
+```
+
 
 ## Usage
 
@@ -55,31 +81,3 @@ this.$toast.show('Keeping it simple')
   })
 ```
 ![](media/actions.gif?raw=true)
-
-
-## Quick Setup
-1. Add the `nuxt-tv-toast` dependency to your Nuxt.js project
-```bash
-# Using npm
-npm install nuxt-tv-toast
-# Using yarn
-yarn add nuxt-tv-toast
-```
-
-2. Add `nuxt-tv-toast` to the `modules` section of `nuxt.concifg.js`
-```js
-{
-  modules: [
-    'nuxt-tv-toast'
-  ]
-}
-```
-
-3. If you're using [Purge](https://tailwindcss.com/docs/controlling-file-size), add this module to the content section of `tailwind.config.js`
-
-```js
-module.exports = {
-    content: [
-      './node_modules/tv-toast/**/*.vue'
-  }
-```

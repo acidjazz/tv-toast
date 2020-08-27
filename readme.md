@@ -8,7 +8,7 @@
 [![](https://img.shields.io/badge/chat-on%20discord-7289DA.svg?logo=discord&style=flat-suqare)](https://discord.gg/enn4S6)
 
 
-> programmatic toasts for [nuxtjs](https://nuxtjs.org) powered by [tailwindcss](https://tailwindcss.com)
+> programmatic toasts for [Nuxt.js](https://nuxtjs.org) powered by [Tailwind CSS](https://tailwindcss.com)
 
 ## Usage
 

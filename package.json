@@ -1,6 +1,6 @@
 {
   "name": "tv-toast",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "tailwind powered vuejs toast component",
   "main": "tv-toast.vue",
   "scripts": {

@@ -14,6 +14,16 @@
 
 > programmatic toasts for [nuxtjs](https://nuxtjs.org) powered by [tailwindcss](https://tailwindcss.com)
 
+## Usage
+```js
+  this.$toast.show({
+    type: 'success',
+    title: 'Success',
+    message: 'This is a successful toast',
+  })
+```
+[](media/success1.gif)
+
 ## Quick Setup
 1. Add `nuxt-tv-toast` dependency to your project
 ```bash

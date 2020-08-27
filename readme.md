@@ -78,6 +78,6 @@ yarn add nuxt-tv-toast
 ```js
 module.exports = {
     content: [
-      './node_modules/tv-toast/**/*.vue',
-  },
+      './node_modules/tv-toast/**/*.vue'
+  }
 ```

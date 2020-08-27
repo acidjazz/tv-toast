@@ -25,7 +25,7 @@
             </div>
             <div class="ml-4 flex-shrink-0 flex">
               <button class="inline-flex text-gray-400 transition ease-in-out duration-150 focus:outline-none focus:text-gray-500" @click="destroy">
-                <IconTimes class="h-4 w-4" primary="text-gray-400" secondary="text-4ray-300"></IconTimes>
+                <IconTimes class="h-4 w-4" primary="text-gray-400" secondary="text-gray-400"></IconTimes>
               </button>
             </div>
           </div>

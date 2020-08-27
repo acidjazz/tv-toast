@@ -7,7 +7,7 @@ export default {
   install(Vue) {
     if (installed) return
     Vue.component('TvToast', TvToast)
-    installed= true
+    installed = true
   }
 }
 

@@ -11,3 +11,4 @@
     <a href="https://discord.gg/enn4S6"><img src="https://img.shields.io/badge/chat-on%20discord-7289DA.svg?logo=discord" /></a>
     <a href="https://tv-toast.net"><img src="https://img.shields.io/badge/code_style-tv-toast-7957d5.svg?style=flat-square" /></a>
  </p>
+> programmatic toasts for [nuxtjs](https://nuxtjs.org) powered by [tailwindcss](https://tailwindcss.com)

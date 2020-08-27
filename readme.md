@@ -9,7 +9,7 @@
 [![](https://img.shields.io/github/license/acidjazz/tv-toast?style=flat-square)](https://www.npmjs.com/package-tv-toast)
 
 
-> This requires both [Nuxt.js](https://nuxtjs.org) and [Tailwind CSS](https://tailwindcss.nuxtjs.org)
+> This requires [Nuxt.js](https://nuxtjs.org) with the [Tailwind CSS](https://tailwindcss.nuxtjs.org) module
 
 ## Quick Setup
 1. Add the `nuxt-tv-toast` dependency to your Nuxt.js project

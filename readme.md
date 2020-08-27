@@ -15,6 +15,7 @@
 > programmatic toasts for [nuxtjs](https://nuxtjs.org) powered by [tailwindcss](https://tailwindcss.com)
 
 ## Usage
+
 * Show a successful notification
 ```js
   this.$toast.show({
@@ -23,7 +24,18 @@
     message: 'This is a successful toast',
   })
 ```
-![](media/success1.gif?raw=true)
+![](media/success.gif?raw=true)
+
+* Show an Error 
+```js
+  this.$toast.show({
+    type: 'danger',
+    title: 'Error',
+    message: 'Please specify an e-mail address',
+  })
+```
+![](media/error.gif?raw=true)
+
 
 ## Quick Setup
 1. Add `nuxt-tv-toast` dependency to your project

@@ -11,7 +11,7 @@
 ## Usage
 
 ```js
-this.toast.show('Keeping it simple')
+this.$toast.show('Keeping it simple')
 ```
 ![](media/simple.gif?raw=true)
 

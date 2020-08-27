@@ -3,9 +3,9 @@
 </p>
 
 [![](https://img.shields.io/badge/nuxt.js-v2.14.3-04C690.svg?style=flat-square)](https://nuxtjs.org)
-[![](https://img.shields.io/npm/v/tv-toast.svg?logo=npm&style=flat-suqare)](https://www.npmjs.com/package/tv-toast)
-[![](https://img.shields.io/npm/dt/tv-toast.svg?style=flat-suqare)](https://www.npmjs.com/package/tv-toast)
-[![](https://img.shields.io/badge/chat-on%20discord-7289DA.svg?logo=discord&style=flat-suqare)](https://discord.gg/enn4S6)
+[![](https://img.shields.io/npm/v/tv-toast.svg?logo=npm&style=flat-square)](https://www.npmjs.com/package/tv-toast)
+[![](https://img.shields.io/npm/dt/tv-toast.svg?style=flat-square)](https://www.npmjs.com/package/tv-toast)
+[![](https://img.shields.io/badge/chat-on%20discord-7289DA.svg?logo=discord&style=flat-square)](https://discord.gg/enn4S6)
 [![](https://img.shields.io/github/license/acidjazz/tv-toast?style=flat-square)](https://www.npmjs.com/package-tv-toast)
 
 

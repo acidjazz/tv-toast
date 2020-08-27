@@ -22,7 +22,7 @@
     message: 'This is a successful toast',
   })
 ```
-[](media/success1.gif)
+![](media/success1.gif)
 
 ## Quick Setup
 1. Add `nuxt-tv-toast` dependency to your project

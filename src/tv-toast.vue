@@ -53,10 +53,10 @@
 </template>
 
 <script>
-import { removeElement } from 'utils.js'
-import IconCheck from '@/icons/IconCheck'
-import IconBang from '@/icons/IconBang'
-import IconTimes from '@/icons/IconTimes'
+import { removeElement } from './utils.js'
+import IconCheck from './icons/IconCheck'
+import IconBang from './icons/IconBang'
+import IconTimes from './icons/IconTimes'
 export default {
   components: { IconCheck, IconBang, IconTimes, },
   props: {

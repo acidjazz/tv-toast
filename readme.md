@@ -36,7 +36,7 @@ this.toast.show('Keeping it simple')
 ```js
   this.$toast.show({
     message: 'Single action toast',
-    primary: { label: 'Primary', action: () => alert('primary') },
+    primary: { label: 'UNDO', action: () => alert('primary') },
     timeout: false,
   })
 ```

@@ -6,7 +6,7 @@
 [![](https://img.shields.io/badge/nuxt.js-module-04C690.svg?style=flat-square)](https://nuxtjs.org)
 ![Test Javascript](https://github.com/acidjazz/tv-toast/workflows/Test%20Javascript/badge.svg)
 [![](https://img.shields.io/npm/dt/tv-toast.svg?style=flat-square)](https://www.npmjs.com/package/tv-toast)
-[![](https://img.shields.io/badge/chat-on%20discord-7289DA.svg?logo=discord&style=flat-square)](https://discord.gg/enn4S6)
+<!-- [![](https://img.shields.io/badge/chat-on%20discord-7289DA.svg?logo=discord&style=flat-square)](https://discord.gg/enn4S6) -->
 [![](https://img.shields.io/github/license/acidjazz/tv-toast?style=flat-square)](https://www.npmjs.com/package-tv-toast)
 
 > This requires [Nuxt.js](https://nuxtjs.org) with the [Tailwind CSS](https://tailwindcss.nuxtjs.org) module

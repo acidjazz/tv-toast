@@ -2,7 +2,8 @@
   <img src="media/toast.png" width="600" />
 </p>
 
-[![](https://img.shields.io/badge/nuxt.js-v2.14.3-04C690.svg?style=flat-square)](https://nuxtjs.org)
+![Test Javascript](https://github.com/acidjazz/tv-toast/workflows/Test%20Javascript/badge.svg)
+[![](https://img.shields.io/badge/nuxt.js-module-04C690.svg?style=flat-square)](https://nuxtjs.org)
 [![](https://img.shields.io/npm/v/tv-toast.svg?logo=npm&style=flat-square)](https://www.npmjs.com/package/tv-toast)
 [![](https://img.shields.io/npm/dt/tv-toast.svg?style=flat-square)](https://www.npmjs.com/package/tv-toast)
 [![](https://img.shields.io/badge/chat-on%20discord-7289DA.svg?logo=discord&style=flat-square)](https://discord.gg/enn4S6)

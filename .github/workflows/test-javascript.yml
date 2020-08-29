@@ -1,4 +1,5 @@
 name: Test Javascript
+on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest

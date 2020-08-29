@@ -1,5 +1,4 @@
 <template>
-
   <!-- div class="z-40 fixed inset-0 flex flex-col-reverse items-end justify-center px-4 py-6 pointer-events-none sm:p-6 sm:items-end sm:justify-end'"></div> make sure these dont get purged -->
   <transition enter-active-class="transform ease-out duration-300 transition" enter-class="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2" enter-to-class="translate-y-0 opacity-100 sm:translate-x-0" leave-active-class="transition ease-in duration-100" leave-class="opacity-100" leave-to-class="opacity-0">
     <div v-if="active && primary === false" class="max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto relative mb-4 overflow-hidden">
@@ -8,21 +7,21 @@
         <div class="p-4">
           <div class="flex items-start">
             <div class="flex-shrink-0">
-              <div class="border-2 border-green-200 rounded-full p-1" v-if="type === 'success'">
+              <div v-if="type === 'success'" class="border-2 border-green-200 rounded-full p-1">
                 <IconCheck class="w-3 h-3" primary="text-green-400" secondary="text-green-300"></IconCheck>
               </div>
-              <div class="border-2 border-blue-200 rounded-full p-1" v-if="type === 'info'">
+              <div v-if="type === 'info'" class="border-2 border-blue-200 rounded-full p-1">
                 <IconInfo class="w-3 h-3" primary="text-blue-400" secondary="text-blue-300"></IconInfo>
               </div>
-              <div class="border-2 border-yellow-200 rounded-full p-1" v-if="type === 'warning'">
+              <div v-if="type === 'warning'" class="border-2 border-yellow-200 rounded-full p-1">
                 <IconBang class="w-3 h-3" primary="text-yellow-400" secondary="text-yellow-300"></IconBang>
               </div>
-              <div class="border-2 border-red-200 rounded-full p-1" v-if="type === 'danger'">
+              <div v-if="type === 'danger'" class="border-2 border-red-200 rounded-full p-1">
                 <IconBang class="w-3 h-3" primary="text-red-400" secondary="text-red-300"></IconBang>
               </div>
             </div>
             <div class="ml-3 w-0 flex-1 pt-0.5">
-              <p class="text-sm leading-5 font-medium text-gray-900" v-if="title">{{ title }}</p>
+              <p v-if="title" class="text-sm leading-5 font-medium text-gray-900">{{ title }}</p>
               <p class="text-sm leading-5 text-gray-500 overflow-scroll" :class="{'mt-1': title}" v-html="message"></p>
             </div>
             <div class="ml-4 flex-shrink-0 flex">
@@ -34,12 +33,12 @@
         </div>
       </div>
     </div>
-    <div class="max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto mb-4" v-if="active && primary !== false && secondary !== false">
+    <div v-if="active && primary !== false && secondary !== false" class="max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto mb-4">
       <div v-if="timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100" :style="`width: ${timeLeftPercent}%`"></div>
       <div class="flex rounded-lg shadow-xs">
         <div class="w-0 flex-1 flex items-center p-4">
           <div class="w-full">
-            <p class="text-sm leading-5 font-medium text-gray-900" v-if="title">{{ title }}</p>
+            <p v-if="title" class="text-sm leading-5 font-medium text-gray-900">{{ title }}</p>
             <p class="text-sm leading-5 text-gray-500" :class="{'mt-1': title}" v-html="message"></p>
           </div>
         </div>
@@ -55,7 +54,7 @@
         </div>
       </div>
     </div>
-    <div class="max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto mb-4" v-if="active && primary !== false && secondary === false">
+    <div v-if="active && primary !== false && secondary === false" class="max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto mb-4">
       <div v-if="timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100" :style="`width: ${timeLeftPercent}%`"></div>
       <div class="rounded-lg shadow-xs overflow-hidden">
         <div class="p-4">

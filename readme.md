@@ -96,3 +96,25 @@ this.$toast.show('Keeping it simple')
   })
 ```
 ![](media/custom.gif?raw=true)
+
+
+## Options
+
+### `title`
+ - Optional, Default: `false`
+### `message`
+ - Required, Default: `Please specify a message`
+### `type` 
+ - Optional, Default: false
+ - Acceptable: success, info, danger, warning
+### `timeout`
+ - Allow the toast to timeout in second(s)
+ - Displays a timeout progress bar
+ - Optional, Default: `2`
+### `primary` 
+ - Provide a label and callback for a primary button
+ - Optional, Object,
+ - ex: `{ label: 'UNDO', action: () => alert('primary') }`
+ 
+ 
+

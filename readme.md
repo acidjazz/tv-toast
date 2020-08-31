@@ -115,6 +115,13 @@ this.$toast.show('Keeping it simple')
  - Provide a label and callback for a primary button
  - Optional, Object,
  - ex: `{ label: 'UNDO', action: () => alert('primary') }`
+### `secondary` 
+ - Provide a label and callback for a scondary button
+ - Optional, Object,
+ - ex: `{ label: 'UNDO', action: () => alert('primary') }`
+### `classToast`, `classTitle`, `classMessage`, `classClose`, `classTimeout` 
+ - Optional, defaulting to white and grays
+ - Specify any tailwind classes you'd like to combine
  
  
 

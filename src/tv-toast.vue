@@ -1,9 +1,9 @@
 <template>
   <!-- div class="z-40 fixed inset-0 flex flex-col-reverse items-end justify-center px-4 py-6 pointer-events-none sm:p-6 sm:items-end sm:justify-end'"></div> make sure these dont get purged -->
   <transition enter-active-class="transform ease-out duration-300 transition" enter-class="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2" enter-to-class="translate-y-0 opacity-100 sm:translate-x-0" leave-active-class="transition ease-in duration-100" leave-class="opacity-100" leave-to-class="opacity-0">
-    <div v-if="active && primary === false" class="max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto relative mb-4 overflow-hidden">
-      <div v-if="timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100" :style="`width: ${timeLeftPercent}%`"></div>
-      <div class="rounded-lg shadow-xs overflow-hidden bg-white z-100">
+    <div v-if="active && primary === false" :class="classToast" class="max-w-sm w-full shadow-lg rounded-lg pointer-events-auto relative mb-4 overflow-hidden">
+      <div v-if="timeout" :class="classTimeout" class="absolute left-0 bottom-0 right-0 h-1 rounded" :style="`width: ${timeLeftPercent}%`"></div>
+      <div :class="classToast" class="rounded-lg shadow-xs overflow-hidden z-100">
         <div class="p-4">
           <div class="flex items-start">
             <div class="flex-shrink-0">
@@ -21,25 +21,25 @@
               </div>
             </div>
             <div class="ml-3 w-0 flex-1 pt-0.5">
-              <p v-if="title" class="text-sm leading-5 font-medium text-gray-900">{{ title }}</p>
-              <p class="text-sm leading-5 text-gray-500 overflow-scroll" :class="{'mt-1': title}" v-html="message"></p>
+              <p v-if="title" :class="classTitle" class="text-sm leading-5 font-medium">{{ title }}</p>
+              <p :class="[classMessage, {'mt-1': title}]" class="text-sm leading-5 overflow-scroll" v-html="message"></p>
             </div>
             <div class="ml-4 flex-shrink-0 flex">
               <button class="inline-flex text-gray-400 transition ease-in-out duration-150 focus:outline-none focus:text-gray-500" @click="destroy">
-                <IconTimes class="h-4 w-4" primary="text-gray-400" secondary="text-gray-400"></IconTimes>
+                <IconTimes class="h-4 w-4" :primary="classClose" :secondary="classClose"></IconTimes>
               </button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div v-if="active && primary !== false && secondary !== false" class="max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto mb-4">
+    <div v-if="active && primary !== false && secondary !== false" :class="classToast" class="max-w-md w-full shadow-lg rounded-lg pointer-events-auto mb-4">
       <div v-if="timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100" :style="`width: ${timeLeftPercent}%`"></div>
       <div class="flex rounded-lg shadow-xs">
         <div class="w-0 flex-1 flex items-center p-4">
           <div class="w-full">
-            <p v-if="title" class="text-sm leading-5 font-medium text-gray-900">{{ title }}</p>
-            <p class="text-sm leading-5 text-gray-500" :class="{'mt-1': title}" v-html="message"></p>
+            <p v-if="title" :class="classTitle" class="text-sm leading-5 font-medium">{{ title }}</p>
+            <p :class="[classMessage, {'mt-1': title}]" class="text-sm leading-5" v-html="message"></p>
           </div>
         </div>
         <div class="flex border-l border-gray-200">
@@ -54,7 +54,7 @@
         </div>
       </div>
     </div>
-    <div v-if="active && primary !== false && secondary === false" class="max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto mb-4">
+    <div v-if="active && primary !== false && secondary === false" :class="classToast" class="max-w-sm w-full shadow-lg rounded-lg pointer-events-auto mb-4">
       <div v-if="timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100" :style="`width: ${timeLeftPercent}%`"></div>
       <div class="rounded-lg shadow-xs overflow-hidden">
         <div class="p-4">
@@ -65,7 +65,7 @@
             </div>
             <div class="ml-4 flex-shrink-0 flex">
               <button class="inline-flex text-gray-400 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150">
-                <IconTimes class="h-4 w-4" primary="text-gray-400" secondary="text-gray-400"></IconTimes>
+                <IconTimes class="h-4 w-4" :primary="classClose" :secondary="classClose"></IconTimes>
               </button>
             </div>
           </div>
@@ -113,6 +113,31 @@ export default {
       type: [Boolean, Object],
       required: false,
       default: false,
+    },
+    classToast: {
+      type: String,
+      required: false,
+      default: 'bg-white',
+    },
+    classTitle: {
+      type: String,
+      required: false,
+      default: 'text-gray-900',
+    },
+    classMessage: {
+      type: String,
+      required: false,
+      default: 'text-gray-500',
+    },
+    classClose: {
+      type: String,
+      required: false,
+      default: 'text-gray-400',
+    },
+    classTimeout: {
+      type: String,
+      required: false,
+      default: 'bg-gray-100',
     },
   },
 

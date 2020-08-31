@@ -12,18 +12,18 @@
 > This requires [Nuxt.js](https://nuxtjs.org) with the [Tailwind CSS](https://tailwindcss.nuxtjs.org) module
 
 ## Quick Setup
-1. Add the `nuxt-tv-toast` dependency to your Nuxt.js project
+1. Add the `nuxt-tailvue` dependency to your Nuxt.js project
 ```bash
-npm install nuxt-tv-toast
+npm install nuxt-tailvue
 # OR
-yarn add nuxt-tv-toast
+yarn add nuxt-tailvue
 ```
 
-2. Add `nuxt-tv-toast` to the `modules` section of `nuxt.concifg.js`
+2. Add `nuxt-tailvue` to the `modules` section of `nuxt.config.js`
 ```js
 {
   modules: [
-    'nuxt-tv-toast'
+    ['nuxt-tailvue', {toast: true}],
   ]
 }
 ```

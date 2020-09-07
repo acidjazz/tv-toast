@@ -77,9 +77,11 @@
 
 <script>
 import { removeElement } from './utils.js'
-import IconCheck from './icons/IconCheck'
-import IconBang from './icons/IconBang'
-import IconTimes from './icons/IconTimes'
+import {
+  IconCheck,
+  IconBang,
+  IconTimes,
+ } from 'tv-icon'
 export default {
   components: { IconCheck, IconBang, IconTimes, },
   props: {

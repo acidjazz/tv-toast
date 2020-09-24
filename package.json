@@ -1,6 +1,6 @@
 {
   "name": "tv-toast",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "programmatic toasts for nuxtjs powered by tailwindcss",
   "main": "src/index.js",
   "scripts": {

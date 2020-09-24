@@ -1,9 +1,15 @@
 <template>
   <!-- div class="z-40 fixed inset-0 flex flex-col-reverse items-end justify-center px-4 py-6 pointer-events-none sm:p-6 sm:items-end sm:justify-end'"></div> make sure these dont get purged -->
-  <transition enter-active-class="transform ease-out duration-300 transition" enter-class="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2" enter-to-class="translate-y-0 opacity-100 sm:translate-x-0" leave-active-class="transition ease-in duration-100" leave-class="opacity-100" leave-to-class="opacity-0">
-    <div v-if="active && primary === false" :class="classToast" class="max-w-sm w-full shadow-lg rounded-lg pointer-events-auto relative mb-4 overflow-hidden">
+  <transition
+    enter-active-class="transform ease-out duration-300 transition"
+    enter-class="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
+    enter-to-class="translate-y-0 opacity-100 sm:translate-x-0"
+    leave-active-class="transition ease-in duration-100"
+    leave-class="opacity-100"
+    leave-to-class="opacity-0">
+    <div v-if="active && primary === false" :class="classToastAll" class="max-w-sm w-full shadow-lg rounded-lg pointer-events-auto relative mb-4 overflow-hidden">
       <div v-if="timeout" :class="classTimeout" class="absolute left-0 bottom-0 right-0 h-1 rounded" :style="`width: ${timeLeftPercent}%`"></div>
-      <div :class="classToast" class="rounded-lg shadow-xs overflow-hidden z-100">
+      <div :class="classToastAll" class="rounded-lg shadow-xs overflow-hidden z-100">
         <div class="p-4">
           <div class="flex items-start">
             <div class="flex-shrink-0">
@@ -33,7 +39,7 @@
         </div>
       </div>
     </div>
-    <div v-if="active && primary !== false && secondary !== false" :class="classToast" class="max-w-md w-full shadow-lg rounded-lg pointer-events-auto mb-4">
+    <div v-if="active && primary !== false && secondary !== false" :class="classToastAll" class="max-w-md w-full shadow-lg rounded-lg pointer-events-auto mb-4">
       <div v-if="timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100" :style="`width: ${timeLeftPercent}%`"></div>
       <div class="flex rounded-lg shadow-xs">
         <div class="w-0 flex-1 flex items-center p-4">
@@ -54,7 +60,7 @@
         </div>
       </div>
     </div>
-    <div v-if="active && primary !== false && secondary === false" :class="classToast" class="max-w-sm w-full shadow-lg rounded-lg pointer-events-auto mb-4">
+    <div v-if="active && primary !== false && secondary === false" :class="classToastAll" class="max-w-sm w-full shadow-lg rounded-lg pointer-events-auto mb-4">
       <div v-if="timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100" :style="`width: ${timeLeftPercent}%`"></div>
       <div class="rounded-lg shadow-xs overflow-hidden">
         <div class="p-4">
@@ -141,6 +147,11 @@ export default {
       required: false,
       default: 'bg-gray-100',
     },
+    defaults: {
+      type: Object,
+      required: false,
+      default: () => { },
+    },
   },
 
   data () {
@@ -154,6 +165,13 @@ export default {
 
   computed: {
 
+    classToastAll () {
+      if (this.defaults.classToast) {
+        return [this.classToast, this.defaults.classToast]
+      }
+      return [this.classToast]
+    },
+
    timeLeftPercent () {
       return Math.round(((this.timeLeft * 100 / (this.timeout * 1000)) * 100) / 100)
     },
@@ -166,6 +184,7 @@ export default {
       this.timeLeft = (this.timeout * 1000)
       this.interval = setInterval(() => this.updateTime(), this.speed)
     }
+    console.log(this.defaults)
   },
 
   methods: {

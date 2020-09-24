@@ -123,5 +123,14 @@ this.$toast.show('Keeping it simple')
  - Optional, defaulting to white and grays
  - Specify any tailwind classes you'd like to combine
  
+ ## Defaults
  
-
+ * You can add extra classes to the container the toasts are injected into
+ 
+```js
+{
+  modules: [
+    [ 'nuxt-tailvue', { all: true, toast: { defaults: { containerClasses: 'mt-12' } } } ],
+  ]
+}
+```

@@ -164,18 +164,17 @@ export default {
   },
 
   computed: {
-
     classToastAll () {
-      if (this.defaults.classToast) {
+      if (this.defaults && this.defaults.classToast) {
         return [this.classToast, this.defaults.classToast]
       }
-      return [this.classToast]
+      if (this.classToast)
+        return [this.classToast]
+      return []
     },
-
    timeLeftPercent () {
       return Math.round(((this.timeLeft * 100 / (this.timeout * 1000)) * 100) / 100)
     },
-
   },
 
   mounted () {
@@ -184,7 +183,6 @@ export default {
       this.timeLeft = (this.timeout * 1000)
       this.interval = setInterval(() => this.updateTime(), this.speed)
     }
-    console.log(this.defaults)
   },
 
   methods: {

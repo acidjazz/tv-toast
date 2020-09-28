@@ -150,7 +150,7 @@ export default {
     defaults: {
       type: Object,
       required: false,
-      default: () => { },
+      default: () => ({}),
     },
   },
 

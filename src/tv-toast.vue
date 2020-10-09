@@ -28,7 +28,7 @@
             </div>
             <div class="ml-3 w-0 flex-1 pt-0.5">
               <p v-if="title" :class="classTitle" class="text-sm leading-5 font-medium">{{ title }}</p>
-              <p :class="[classMessage, {'mt-1': title}]" class="text-sm leading-5 overflow-scroll" v-html="message"></p>
+              <p :class="[classMessage, {'mt-1': title}]" class="text-sm leading-5" v-html="message"></p>
             </div>
             <div class="ml-4 flex-shrink-0 flex">
               <button class="inline-flex text-gray-400 transition ease-in-out duration-150 focus:outline-none focus:text-gray-500" @click="destroy">

@@ -4,9 +4,9 @@
     enter-active-class="transform ease-out duration-300 transition"
     enter-class="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
     enter-to-class="translate-y-0 opacity-100 sm:translate-x-0"
-    leave-active-class="transition ease-in duration-100"
-    leave-class="opacity-100"
-    leave-to-class="opacity-0">
+    leave-active-class="transform ease-in duration-100"
+    leave-class="opacity-100 sm:translate-x-0 translate-y-0"
+    leave-to-class="opacity-0 sm:translate-x-1 translate-y-1 sm:translate-y-0">
     <div v-if="active && primary === false" :class="classToastAll" class="max-w-sm w-full shadow-lg rounded-lg pointer-events-auto relative mb-4 overflow-hidden">
       <div v-if="timeout" :class="classTimeout" class="absolute left-0 bottom-0 right-0 h-1 rounded" :style="`width: ${timeLeftPercent}%`"></div>
       <div :class="classToastAll" class="rounded-lg shadow-xs overflow-hidden z-100">
@@ -24,6 +24,14 @@
               </div>
               <div v-if="type === 'danger'" class="border-2 border-red-200 rounded-full p-1">
                 <IconBang class="w-3 h-3" primary="text-red-400" secondary="text-red-300"></IconBang>
+              </div>
+              <div v-if="icon !== false">
+                <component
+                  :is="icon"
+                  :primary="iconPrimary"
+                  :secondary="iconSecondary"
+                  class="w-6 h-6"
+                ></component>
               </div>
             </div>
             <div class="ml-3 w-0 flex-1 pt-0.5">
@@ -107,6 +115,21 @@ export default {
       validate: (type) => { return ['success', 'info', 'danger', 'warning'].includes(type) },
       default: '',
     },
+    icon: {
+      type: [Boolean, String],
+      required: false,
+      default: false,
+    },
+    iconPrimary: {
+      type: String,
+      required: false,
+      default: '',
+    },
+    iconSecondary: {
+      type: String,
+      required: false,
+      default: '',
+    },
     timeout: {
       type: [Boolean, Number],
       required: false,
@@ -145,7 +168,7 @@ export default {
     classTimeout: {
       type: String,
       required: false,
-      default: 'bg-gray-100',
+      default: 'bg-gray-200',
     },
     defaults: {
       type: Object,

@@ -37,10 +37,10 @@
     "jest": "^26.4.2",
     "vue": "^2.6.12",
     "vue-jest": "^3.0.6",
+    "@vue/cli-service": "^4.5.8",
     "vue-template-compiler": "^2.6.12"
   },
   "dependencies": {
-    "@vue/cli-service": "^4.5.8",
     "tv-icon": "^1.0.1"
   }
 }

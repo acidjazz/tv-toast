@@ -8,7 +8,7 @@
     leave-class="opacity-100 sm:translate-x-0 translate-y-0"
     leave-to-class="opacity-0 sm:translate-x-1 translate-y-1 sm:translate-y-0">
     <div v-if="active && primary === false" :class="classToastAll" class="max-w-sm w-full shadow-lg rounded-lg pointer-events-auto relative mb-4 overflow-hidden">
-      <div v-if="timeout" :class="classTimeout" class="absolute left-0 bottom-0 right-0 h-1 rounded" :style="`width: ${timeLeftPercent}%`"></div>
+      <div v-if="progress && timeout" :class="classTimeout" class="absolute left-0 bottom-0 right-0 h-1 rounded" :style="`width: ${timeLeftPercent}%`"></div>
       <div :class="classToastAll" class="rounded-lg shadow-xs overflow-hidden z-100">
         <div class="p-4">
           <div class="flex items-start">
@@ -48,7 +48,7 @@
       </div>
     </div>
     <div v-if="active && primary !== false && secondary !== false" :class="classToastAll" class="max-w-md w-full shadow-lg rounded-lg pointer-events-auto mb-4">
-      <div v-if="timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100" :style="`width: ${timeLeftPercent}%`"></div>
+      <div v-if="progress && timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100" :style="`width: ${timeLeftPercent}%`"></div>
       <div class="flex rounded-lg shadow-xs">
         <div class="w-0 flex-1 flex items-center p-4">
           <div class="w-full">
@@ -69,7 +69,7 @@
       </div>
     </div>
     <div v-if="active && primary !== false && secondary === false" :class="classToastAll" class="max-w-sm w-full shadow-lg rounded-lg pointer-events-auto mb-4">
-      <div v-if="timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100" :style="`width: ${timeLeftPercent}%`"></div>
+      <div v-if="progress && timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100" :style="`width: ${timeLeftPercent}%`"></div>
       <div class="rounded-lg shadow-xs overflow-hidden">
         <div class="p-4">
           <div class="flex items-center">
@@ -114,6 +114,11 @@ export default {
       required: false,
       validate: (type) => { return ['success', 'info', 'danger', 'warning'].includes(type) },
       default: '',
+    },
+    progress: {
+      type: Boolean,
+      required: false,
+      default: true,
     },
     icon: {
       type: [Boolean, String],

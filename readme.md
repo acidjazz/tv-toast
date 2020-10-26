@@ -111,6 +111,9 @@ this.$toast.show('Keeping it simple')
  - Allow the toast to timeout in second(s)
  - Displays a timeout progress bar
  - Optional, Default: `2`
+### `progress`
+ - Optional, Default: `true`
+ - Control if the progress line appears
 ### `primary` 
  - Provide a label and callback for a primary button
  - Optional, Object,
@@ -125,7 +128,18 @@ this.$toast.show('Keeping it simple')
  
  ## Defaults
  
- * You can add extra classes to the container the toasts are injected into
+ ### Toast Container
+ 
+ * Default toast container classes are as follows
+ 
+ ```js
+ const containerClasses = [
+   'z-40', 'fixed', 'inset-0', 'flex', 'flex-col-reverse', 'items-end', 'justify-center',
+   'px-4', 'py-6', 'pointer-events-none', 'sm:p-6', 'sm:items-end', 'sm:justify-end'
+ ]
+```
+ 
+ * You maybe add your own classes to alter the position
  
 ```js
 {
@@ -134,5 +148,4 @@ this.$toast.show('Keeping it simple')
   ]
 }
 ```
-
 > This will move toasts lower 

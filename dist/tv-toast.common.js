@@ -183,6 +183,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, "TvToast", function() { return /* reexport */ tv_toast; });
 __webpack_require__.d(__webpack_exports__, "spawn", function() { return /* reexport */ spawn; });
 __webpack_require__.d(__webpack_exports__, "removeElement", function() { return /* reexport */ removeElement; });
+__webpack_require__.d(__webpack_exports__, "containerClasses", function() { return /* reexport */ containerClasses; });
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
 // This file is imported into lib/wc client bundles.
@@ -603,6 +604,11 @@ var component = normalizeComponent(
 
 
 let installed = false
+
+const containerClasses = [
+  'z-40', 'fixed', 'inset-0', 'flex', 'flex-col-reverse', 'items-end', 'justify-center',
+  'px-4', 'py-6', 'pointer-events-none', 'sm:p-6', 'sm:items-end', 'sm:justify-end'
+]
 
 /* harmony default export */ var src_0 = ({
   install(Vue) {

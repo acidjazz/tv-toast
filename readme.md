@@ -32,8 +32,9 @@ yarn add nuxt-tailvue
 
 ```js
 module.exports = {
-    content: [
+    purge: [
       'node_modules/tv-*/dist/tv-*.umd.min.js',
+      ],
   }
 ```
 

@@ -8,7 +8,7 @@
     leave-class="opacity-100 sm:translate-x-0 translate-y-0"
     leave-to-class="opacity-0 sm:translate-x-1 translate-y-1 sm:translate-y-0">
     <div v-if="active && primary === false" :class="classToastAll" class="max-w-sm w-full shadow-lg rounded-lg pointer-events-auto relative mb-4 overflow-hidden">
-      <div v-if="progress && timeout" :class="classTimeout" class="absolute left-0 bottom-0 right-0 h-1 rounded" :style="`width: ${timeLeftPercent}%`"></div>
+      <div v-if="progress && timeout" :class="classTimeout" class="absolute left-0 bottom-0 right-0 h-1 rounded" :style="`width: ${timeLeftPercent}%; transition: width 0.1s linear;`"></div>
       <div :class="classToastAll" class="rounded-lg shadow-xs overflow-hidden z-100">
         <div class="p-4">
           <div class="flex items-start">

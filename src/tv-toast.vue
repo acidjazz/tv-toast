@@ -48,7 +48,7 @@
       </div>
     </div>
     <div v-if="active && primary !== false && secondary !== false" :class="classToastAll" class="max-w-md w-full shadow-lg rounded-lg pointer-events-auto mb-4">
-      <div v-if="progress && timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100" :style="`width: ${timeLeftPercent}%`"></div>
+      <div v-if="progress && timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100"  :style="`width: ${timeLeftPercent}%; transition: width 0.1s linear;`"></div>
       <div class="flex rounded-lg shadow-xs">
         <div class="w-0 flex-1 flex items-center p-4">
           <div class="w-full">
@@ -69,7 +69,7 @@
       </div>
     </div>
     <div v-if="active && primary !== false && secondary === false" :class="classToastAll" class="max-w-sm w-full shadow-lg rounded-lg pointer-events-auto mb-4">
-      <div v-if="progress && timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100" :style="`width: ${timeLeftPercent}%`"></div>
+      <div v-if="progress && timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100"  :style="`width: ${timeLeftPercent}%; transition: width 0.1s linear;`"></div>
       <div class="rounded-lg shadow-xs overflow-hidden">
         <div class="p-4">
           <div class="flex items-center">

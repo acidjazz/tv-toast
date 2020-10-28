@@ -8,7 +8,7 @@
     leave-class="opacity-100 sm:translate-x-0 translate-y-0"
     leave-to-class="opacity-0 sm:translate-x-1 translate-y-1 sm:translate-y-0">
     <div v-if="active && primary === false" :class="classToastAll" class="max-w-sm w-full shadow-lg rounded-lg pointer-events-auto relative mb-4 overflow-hidden">
-      <div v-if="progress && timeout" :class="classTimeout" class="absolute left-0 bottom-0 right-0 h-1 rounded" :style="`width: ${timeLeftPercent}%; transition: width 0.1s linear;`"></div>
+      <div v-if="progress && timeout" :class="classTimeout" class="absolute left-0 bottom-0 right-0 h-1 rounded" :style="progressStyle"></div>
       <div :class="classToastAll" class="rounded-lg shadow-xs overflow-hidden z-100">
         <div class="p-4">
           <div class="flex items-start">
@@ -48,7 +48,7 @@
       </div>
     </div>
     <div v-if="active && primary !== false && secondary !== false" :class="classToastAll" class="max-w-md w-full shadow-lg rounded-lg pointer-events-auto mb-4">
-      <div v-if="progress && timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100"  :style="`width: ${timeLeftPercent}%; transition: width 0.1s linear;`"></div>
+      <div v-if="progress && timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100" :style="progressStyle"></div>
       <div class="flex rounded-lg shadow-xs">
         <div class="w-0 flex-1 flex items-center p-4">
           <div class="w-full">
@@ -69,7 +69,7 @@
       </div>
     </div>
     <div v-if="active && primary !== false && secondary === false" :class="classToastAll" class="max-w-sm w-full shadow-lg rounded-lg pointer-events-auto mb-4">
-      <div v-if="progress && timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100"  :style="`width: ${timeLeftPercent}%; transition: width 0.1s linear;`"></div>
+      <div v-if="progress && timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100"  :style="progressStyle"></div>
       <div class="rounded-lg shadow-xs overflow-hidden">
         <div class="p-4">
           <div class="flex items-center">
@@ -187,7 +187,7 @@ export default {
       active: false,
       interval: false,
       timeLeft: false,
-      speed: 10,
+      speed: 100,
     }
   },
 
@@ -202,7 +202,10 @@ export default {
     },
    timeLeftPercent () {
       return Math.round(((this.timeLeft * 100 / (this.timeout * 1000)) * 100) / 100)
-    },
+   },
+    progressStyle () {
+      return `width: ${this.timeLeftPercent}%; transition: width 0.1s linear;`
+    }
   },
 
   mounted () {

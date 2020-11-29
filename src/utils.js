@@ -13,8 +13,15 @@ export function removeElement (el) {
 
 // add the component w/ the specified props
 export function spawn (id, propsData, Component, Vue, options) {
-  if (propsData && options && options.defaults) {
-    propsData.defaults = options.defaults
+  if (propsData) {
+    if (options) {
+      if (options.defaults) {
+        propsData.defaults = options.defaults
+      }
+      if (options.defaultProps) {
+        propsData = {...options.defaultProps, ...propsData}
+      }
+    }
   }
   const Instance = Vue.extend(Component)
   return new Instance({

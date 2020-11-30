@@ -154,3 +154,27 @@ this.$toast.show('Keeping it simple')
 }
 ```
 > This will move toasts lower 
+
+### Defaults for Props
+
+You can also set default values for all props passed to the tv-toast component using:
+
+ ```js
+ {
+   modules: [
+     [ 'nuxt-tailvue', 
+        { 
+            all: true, 
+            toast: { 
+                defaultProps: { 
+                    timeout: 10,
+                    progress: false,
+                    classToast: 'bg-red-600'
+                } 
+            } 
+        }
+    ],
+   ]
+ }
+ ```
+

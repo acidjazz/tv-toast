@@ -149,7 +149,7 @@ this.$toast.show('Keeping it simple')
 ```js
 {
   modules: [
-    [ 'nuxt-tailvue', { all: true, toast: { defaults: { containerClasses: 'mt-12' } } } ],
+    [ 'nuxt-tailvue', { all: true, toast: { defaults: { containerClasses: [ 'mt-12' ] } } } ],
   ]
 }
 ```

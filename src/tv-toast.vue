@@ -25,7 +25,7 @@
               <div v-if="type === 'danger'" class="border-2 border-red-200 rounded-full p-1">
                 <IconBang class="w-3 h-3" primary="text-red-400" secondary="text-red-300"></IconBang>
               </div>
-              <div v-if="type === 'denied'" class="border-2 border-red-200 rounded-full p-1">
+              <div v-if="type === 'denied'" class="rounded-full">
                 <IconDenied class="w-3 h-3" primary="text-red-400" secondary="text-red-300"></IconDenied>
               </div>
               <div v-if="icon !== false">

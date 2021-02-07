@@ -54,6 +54,31 @@
       <div v-if="progress && timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100" :style="progressStyle"></div>
       <div class="flex rounded-lg shadow-xs">
         <div class="w-0 flex-1 flex items-center p-4">
+          <div class="flex-shrink-0 mr-4">
+            <div v-if="type === 'success'" class="border-2 border-green-200 rounded-full p-1">
+              <IconCheck class="w-3 h-3" primary="text-green-400" secondary="text-green-300"></IconCheck>
+            </div>
+            <div v-if="type === 'info'" class="border-2 border-blue-200 rounded-full p-1">
+              <IconInfo class="w-3 h-3" primary="text-blue-400" secondary="text-blue-300"></IconInfo>
+            </div>
+            <div v-if="type === 'warning'" class="border-2 border-yellow-200 rounded-full p-1">
+              <IconBang class="w-3 h-3" primary="text-yellow-400" secondary="text-yellow-300"></IconBang>
+            </div>
+            <div v-if="type === 'danger'" class="border-2 border-red-200 rounded-full p-1">
+              <IconBang class="w-3 h-3" primary="text-red-400" secondary="text-red-300"></IconBang>
+            </div>
+            <div v-if="type === 'denied'" class="rounded-full">
+              <IconDenied class="w-5 h-5" primary="text-red-400" secondary="text-red-300"></IconDenied>
+            </div>
+            <div v-if="icon !== false">
+              <component
+                :is="icon"
+                :primary="iconPrimary"
+                :secondary="iconSecondary"
+                class="w-6 h-6"
+              ></component>
+            </div>
+          </div>
           <div class="w-full">
             <p v-if="title" :class="classTitle" class="text-sm leading-5 font-medium">{{ title }}</p>
             <p :class="[classMessage, {'mt-1': title}]" class="text-sm leading-5" v-html="message"></p>
@@ -71,17 +96,42 @@
         </div>
       </div>
     </div>
-    <div v-if="active && primary !== false && secondary === false" :class="classToastAll" class="max-w-sm w-full shadow-lg rounded-lg pointer-events-auto mb-4">
+    <div v-if="active && primary !== false && secondary === false" :class="classToastAll" class="max-w-md w-full shadow-lg rounded-lg pointer-events-auto mb-4">
       <div v-if="progress && timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100"  :style="progressStyle"></div>
       <div class="rounded-lg shadow-xs overflow-hidden">
         <div class="p-4">
           <div class="flex items-center">
+            <div class="flex-shrink-0 mr-4">
+              <div v-if="type === 'success'" class="border-2 border-green-200 rounded-full p-1">
+                <IconCheck class="w-3 h-3" primary="text-green-400" secondary="text-green-300"></IconCheck>
+              </div>
+              <div v-if="type === 'info'" class="border-2 border-blue-200 rounded-full p-1">
+                <IconInfo class="w-3 h-3" primary="text-blue-400" secondary="text-blue-300"></IconInfo>
+              </div>
+              <div v-if="type === 'warning'" class="border-2 border-yellow-200 rounded-full p-1">
+                <IconBang class="w-3 h-3" primary="text-yellow-400" secondary="text-yellow-300"></IconBang>
+              </div>
+              <div v-if="type === 'danger'" class="border-2 border-red-200 rounded-full p-1">
+                <IconBang class="w-3 h-3" primary="text-red-400" secondary="text-red-300"></IconBang>
+              </div>
+              <div v-if="type === 'denied'" class="rounded-full">
+                <IconDenied class="w-5 h-5" primary="text-red-400" secondary="text-red-300"></IconDenied>
+              </div>
+              <div v-if="icon !== false">
+                <component
+                  :is="icon"
+                  :primary="iconPrimary"
+                  :secondary="iconSecondary"
+                  class="w-6 h-6"
+                ></component>
+              </div>
+            </div>
             <div class="w-0 flex-1 flex justify-between">
-              <p class="w-0 flex-1 text-sm leading-5 font-medium text-gray-900" v-html="message"></p>
+              <p class="w-0 flex-1 text-sm leading-5" v-html="message"></p>
               <button class="ml-3 flex-shrink-0 text-sm leading-5 font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150" @click="primaryAction">{{ primary.label }}</button>
             </div>
             <div class="ml-4 flex-shrink-0 flex">
-              <button class="inline-flex text-gray-400 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150">
+              <button class="inline-flex text-gray-400 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150" @click="destroy">
                 <IconTimes class="h-4 w-4" :primary="classClose" :secondary="classClose"></IconTimes>
               </button>
             </div>

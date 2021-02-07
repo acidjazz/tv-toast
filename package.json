@@ -1,6 +1,6 @@
 {
   "name": "tv-toast",
-  "version": "1.2.24",
+  "version": "1.2.25",
   "description": "programmatic toasts for nuxtjs powered by tailwindcss",
   "main": "dist/tv-toast.umd.min.js",
   "files": [

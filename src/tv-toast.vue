@@ -25,6 +25,9 @@
               <div v-if="type === 'danger'" class="border-2 border-red-200 rounded-full p-1">
                 <IconBang class="w-3 h-3" primary="text-red-400" secondary="text-red-300"></IconBang>
               </div>
+              <div v-if="type === 'denied'" class="border-2 border-red-200 rounded-full p-1">
+                <IconDenied class="w-3 h-3" primary="text-red-400" secondary="text-red-300"></IconDenied>
+              </div>
               <div v-if="icon !== false">
                 <component
                   :is="icon"
@@ -112,7 +115,7 @@ export default {
     type: {
       type: String,
       required: false,
-      validate: (type) => { return ['success', 'info', 'danger', 'warning'].includes(type) },
+      validate: (type) => { return ['success', 'info', 'danger', 'warning', 'denied'].includes(type) },
       default: '',
     },
     progress: {

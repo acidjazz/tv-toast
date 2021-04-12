@@ -84,6 +84,9 @@ this.$toast.show('Keeping it simple')
     message: 'This toast has multiple actions',
     primary: { label: 'Primary', action: () => alert('primary') },
     secondary: { label: 'Secondary', action: () => alert('secondary') },
+    classColorPrimary:
+    "text-indigo-600 hover:text-indigo-500 active:text-indigo-700",
+  classColorSecondary: "text-gray-700 hover:text-gray-500 active:text-gray-800",
     timeout: false,
   })
 ```

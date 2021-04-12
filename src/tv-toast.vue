@@ -87,10 +87,10 @@
         <div class="flex border-l border-gray-200">
           <div class="-ml-px flex flex-col">
             <div class="h-0 flex-1 flex border-b border-gray-200">
-              <button class="-mb-px flex items-center justify-center w-full rounded-tr-lg border border-transparent px-4 py-3 text-sm leading-5 font-medium text-indigo-600 transition ease-in-out duration-150 hover:text-indigo-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:text-indigo-700 active:bg-gray-50" @click="primaryAction">{{ primary.label }}</button>
+              <button :class="classColorPrimary" class="-mb-px flex items-center justify-center w-full rounded-tr-lg border border-transparent px-4 py-3 text-sm leading-5 font-medium transition ease-in-out duration-150 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:bg-gray-50" @click="primaryAction">{{ primary.label }}</button>
             </div>
             <div class="-mt-px h-0 flex-1 flex">
-              <button class="flex items-center justify-center w-full rounded-br-lg border border-transparent px-4 py-3 text-sm leading-5 font-medium text-gray-700 transition ease-in-out duration-150 hover:text-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:text-gray-800 active:bg-gray-50" @click="secondaryAction">{{ secondary.label }}</button>
+              <button :class="classColorSecondary" class="flex items-center justify-center w-full rounded-br-lg border border-transparent px-4 py-3 text-sm leading-5 font-medium transition ease-in-out duration-150 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:bg-gray-50" @click="secondaryAction">{{ secondary.label }}</button>
             </div>
           </div>
         </div>
@@ -217,6 +217,16 @@ export default {
       type: String,
       required: false,
       default: 'text-gray-500',
+    },
+    classColorPrimary: {
+      type: String,
+      required: false,
+      default: 'text-indigo-600 hover:text-indigo-500 active:text-indigo-700',
+    },
+    classColorSecondary: {
+      type: String,
+      required: false,
+      default: 'text-gray-700 hover:text-gray-500 active:text-gray-800',
     },
     classClose: {
       type: String,

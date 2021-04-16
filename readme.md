@@ -72,6 +72,9 @@ this.$toast.show('Keeping it simple')
   this.$toast.show({
     message: 'Single action toast',
     primary: { label: 'UNDO', action: () => alert('primary') },
+    classSingleColor: 'text-indigo-600 hover:text-indigo-500',
+    classSingleFocus: 'focus:outline-none focus:underline',
+    classSingleActive: 'active:text-indigo-700 active:bg-gray-50',
     timeout: false,
   })
 ```
@@ -84,6 +87,12 @@ this.$toast.show('Keeping it simple')
     message: 'This toast has multiple actions',
     primary: { label: 'Primary', action: () => alert('primary') },
     secondary: { label: 'Secondary', action: () => alert('secondary') },
+    classMultipleColorPrimary: 'text-indigo-600 hover:text-indigo-500',
+    classMultipleFocusPrimary: 'focus:outline-none focus:shadow-outline-blue focus:border-blue-300',
+    classMultipleActivePrimary: 'active:text-indigo-700 active:bg-gray-50'
+    classMultipleColorSecondary: 'text-gray-700 hover:text-gray-500',
+    classMultipleFocusSecondary: 'focus:outline-none focus:shadow-outline-blue focus:border-blue-300',
+    classMultipleActiveSecondary: 'active:text-gray-800 active:bg-gray-50',
     timeout: false,
   })
 ```

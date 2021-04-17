@@ -130,9 +130,15 @@ this.$toast.show('Keeping it simple')
 ### `classToast`, `classTitle`, `classMessage`, `classClose`, `classTimeout` 
  - Optional, defaulting to white and grays
  - Specify any tailwind classes you'd like to combine
-### `classPrimary`, `classSecondary`, `classSingle`
- - Optional, override the button classes with your own
-
+### `classPrimary`
+ - Optional, override the primary button for multiple action toasts
+ - default: 'text-indigo-600 hover:text-indigo-500 focus:shadow-outline-blue focus:border-blue-300 active:text-indigo-700 active:bg-gray-50'
+### `classSecondary`
+- Optional, override the secondary button for multiple action toasts
+- default: 'text-gray-700 hover:text-gray-500 focus:shadow-outline-blue focus:border-blue-300 active:text-gray-800 active:bg-gray-50',
+### `classSingle`
+- Optional, override the single button classes
+- default: 'text-indigo-600 hover:text-indigo-500',
 ## Defaults
  
  ### Toast Container

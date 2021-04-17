@@ -87,10 +87,20 @@
         <div class="flex border-l border-gray-200">
           <div class="-ml-px flex flex-col">
             <div class="h-0 flex-1 flex border-b border-gray-200">
-              <button :class="[classMultipleColorPrimary, classMultipleFocusPrimary, classMultipleActivePrimary]" class="-mb-px flex items-center justify-center w-full rounded-tr-lg border border-transparent px-4 py-3 text-sm leading-5 font-medium transition ease-in-out duration-150" @click="primaryAction">{{ primary.label }}</button>
+              <button
+                class="-mb-px flex items-center justify-center w-full rounded-tr-lg border border-transparent px-4 py-3 text-sm leading-5 font-medium transition ease-in-out duration-150 focus:outline-none"
+                :class="classPrimary"
+                @click="primaryAction">
+                {{ primary.label }}
+              </button>
             </div>
             <div class="-mt-px h-0 flex-1 flex">
-              <button :class="[classMultipleColorSecondary, classMultipleFocusSecondary, classMultipleActiveSecondary]" class="flex items-center justify-center w-full rounded-br-lg border border-transparent px-4 py-3 text-sm leading-5 font-medium transition ease-in-out duration-150" @click="secondaryAction">{{ secondary.label }}</button>
+              <button
+                class="flex items-center justify-center w-full rounded-br-lg border border-transparent px-4 py-3 text-sm leading-5 font-medium transition ease-in-out duration-150 focus:outline-none"
+                :class="classSecondary"
+                @click="secondaryAction">
+                {{ secondary.label }}
+              </button>
             </div>
           </div>
         </div>
@@ -128,7 +138,11 @@
             </div>
             <div class="w-0 flex-1 flex justify-between">
               <p class="w-0 flex-1 text-sm leading-5" v-html="message"></p>
-              <button :class="[classSingleColor, classSingleFocus, classSingleActive]" class="ml-3 flex-shrink-0 text-sm leading-5 font-medium transition ease-in-out duration-150" @click="primaryAction">{{ primary.label }}</button>
+              <button
+                class="ml-3 flex-shrink-0 text-sm leading-5 font-medium transition ease-in-out duration-150 focus:outline-none focus:underline'"
+                :class="classSingle"
+                @click="primaryAction"
+              >{{ primary.label }}</button>
             </div>
             <div class="ml-4 flex-shrink-0 flex">
               <button class="inline-flex text-gray-400 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150" @click="destroy">
@@ -218,50 +232,20 @@ export default {
       required: false,
       default: 'text-gray-500',
     },
-    classMultipleColorPrimary: {
+    classPrimary: {
+      type: String,
+      required: false,
+      default: 'text-indigo-600 hover:text-indigo-500 focus:shadow-outline-blue focus:border-blue-300 active:text-indigo-700 active:bg-gray-50',
+    },
+    classSecondary: {
+      type: String,
+      required: false,
+      default: 'text-gray-700 hover:text-gray-500 focus:shadow-outline-blue focus:border-blue-300 active:text-gray-800 active:bg-gray-50',
+    },
+    classSingle: {
       type: String,
       required: false,
       default: 'text-indigo-600 hover:text-indigo-500',
-    },
-    classMultipleFocusPrimary: {
-      type: String,
-      required: false,
-      default: 'focus:outline-none focus:shadow-outline-blue focus:border-blue-300'
-    },
-    classMultipleActivePrimary: {
-      type: String,
-      required: false,
-      default: 'active:text-indigo-700 active:bg-gray-50'
-    },
-    classMultipleColorSecondary: {
-      type: String,
-      required: false,
-      default: 'text-gray-700 hover:text-gray-500',
-    },
-    classMultipleFocusSecondary: {
-      type: String,
-      required: false,
-      default: 'focus:outline-none focus:shadow-outline-blue focus:border-blue-300'
-    },
-    classMultipleActiveSecondary: {
-      type: String,
-      required: false,
-      default: 'active:text-gray-800 active:bg-gray-50'
-    },
-    classSingleColor: {
-      type: String,
-      required: false,
-      default: 'text-indigo-600 hover:text-indigo-500'
-    },
-    classSingleFocus: {
-      type: String,
-      required: false,
-      default: 'focus:outline-none focus:underline'
-    },
-    classSingleActive: {
-      type: String,
-      required: false,
-      default: ''
     },
     classClose: {
       type: String,

@@ -51,7 +51,7 @@
       </div>
     </div>
     <div v-if="active && primary !== false && secondary !== false" :class="classToastAll" class="max-w-md w-full shadow-lg rounded-lg pointer-events-auto mb-4">
-      <div v-if="progress && timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100" :style="progressStyle"></div>
+      <div v-if="progress && timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100 dark:bg-gray-900" :style="progressStyle"></div>
       <div class="flex rounded-lg shadow-xs">
         <div class="w-0 flex-1 flex items-center p-4">
           <div class="flex-shrink-0 mr-4">
@@ -107,7 +107,7 @@
       </div>
     </div>
     <div v-if="active && primary !== false && secondary === false" :class="classToastAll" class="max-w-md w-full shadow-lg rounded-lg pointer-events-auto mb-4">
-      <div v-if="progress && timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100"  :style="progressStyle"></div>
+      <div v-if="progress && timeout"  class="absolute left-0 bottom-0 right-0 h-1 rounded bg-gray-100 dark:bg-gray-900"  :style="progressStyle"></div>
       <div class="rounded-lg shadow-xs overflow-hidden">
         <div class="p-4">
           <div class="flex items-center">
@@ -220,17 +220,17 @@ export default {
     classToast: {
       type: String,
       required: false,
-      default: 'bg-white',
+      default: 'bg-white dark:bg-gray-800',
     },
     classTitle: {
       type: String,
       required: false,
-      default: 'text-gray-900',
+      default: 'text-gray-900 dark:text-gray-100',
     },
     classMessage: {
       type: String,
       required: false,
-      default: 'text-gray-500',
+      default: 'text-gray-500 dark:text-gray-400',
     },
     classPrimary: {
       type: String,
@@ -250,12 +250,12 @@ export default {
     classClose: {
       type: String,
       required: false,
-      default: 'text-gray-400',
+      default: 'text-gray-400 dark:text-gray-600',
     },
     classTimeout: {
       type: String,
       required: false,
-      default: 'bg-gray-200',
+      default: 'bg-gray-200 dark:bg-gray-700',
     },
     defaults: {
       type: Object,
